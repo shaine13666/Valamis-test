@@ -1,38 +1,92 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  background-color: #242333;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cinema-title {
+  margin-top: 20px;
+}
+
+.cinema-price {
+  font-size: 14px;
+}
+
+.places-info {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.place-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.place-info > span {
+  margin-left: 5px;
+}
+
+.screen-container {
+  perspective: 1000px;
+  margin-top: 20px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.seats {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row > span {
+  margin-right: 10px;
+}
+
+.seat {
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+.busy {
+  background-color: #872c1e;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.free {
+  background-color: green;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
 }
